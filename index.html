@@ -6,32 +6,32 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Veronika Krukovich - Front-end developer</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="icon" href="./img/fav.png" type="image/x-icon">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/styles/default.min.css">
   </head>
   <body>
-    <header class="container pt-3">
+    <header class="container">
+      <section>
+        <div class="topnav" id="myTopnav"><a href="#home" class="active">Home</a><a href="#About">About</a><a href="#Skills">Skills</a><a href="#about">About</a><a href="#Code">Code examples</a><a href="#Work">Work experience</a><a href="#Education">Education</a><a href="#Languages">Languages</a><a href="#Contacts">Contacts</a><a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa fa-bars"></i></a></div>
+      </section>
+    </header>
+    <main class="container pt-3">
       <section class="row mb-3 border-bottom">
         <div class="col-md">
           <div class="mb-3">
             <figure>
-              <figcaption>
-               </figcaption><img class="circle" src="./img/avatar.png" alt="avatar">
-            </figure>         
+              <figcaption></figcaption><img class="circle" src="./img/avatar.png" alt="avatar">
+            </figure>
           </div>
         </div>
-       
-          <div class="col-md">
-            <div class="mb-3">
-              <h1 class="title-color-primary center">Veronika Krukovich</h1>
-              <h4 class="font-italic center">Front-end developer</h4>
-            </div>
+        <div class="col-md">
+          <div class="mb-3">
+            <h1 class="title-color-primary center">Veronika Krukovich</h1>
+            <h4 class="font-italic center">Front-end developer</h4>
           </div>
-
-
-
-
+        </div>
         <div class="col-md align-self-md-end">
           <div class="d-flex flex-row justify-content-md-end">
             <ul class="reset-list">
@@ -42,47 +42,7 @@
             </ul>
           </div>
         </div>
-
-
-        
-          
-
-
-            <button class="ham">
-              <!-- X and menu icon SVGs from material icons https://material.io/resources/icons/ -->
-              <span class="menuIcon material-icons">
-                menu
-              </span>
-              <span class="xIcon material-icons">
-                close
-              </span>
-            </button>
-            <ul class="menu">
-              
-              <li><a class="menuLink" href="#About">About</a></li>
-              <li><a class="menuLink" href="#Skills">Skills</a></li>
-              <li><a class="menuLink" href="#Code">Code examples</a></li>
-              <li><a class="menuLink" href="#Work">Work experience</a></li>
-              <li><a class="menuLink" href="#Education">Education</a></li>
-              <li><a class="menuLink" href="#Languages">Languages</a></li>
-              <li><a class="menuLink" href="#Contacts">Contacts</a></li>
-
-            </ul>
-
-     
-       
-       
-
-
-
-
-
-
-
-
       </section>
-    </header>
-    <main class="container pt-3">
       <section class="row mb-3 border-bottom" id="About">
         <div class="col-lg-2">
           <h2 class="h3 title-color-primary"> About </h2>
@@ -124,6 +84,25 @@
         </div>
         <div class="col-lg">
           <p>To see my code examples visit my <a href="https://github.com/VKrukovich" target="_blank">github</a> and <a href="https://www.codewars.com/users/VKrukovich/" target="_blank">codewars account</a>.</p>
+          <pre><code class="html">           
+            var maxRedigit = function (num) {
+              if (num &lt; 0 || num == 0)
+                return null;
+              else {
+                var numString = num.toString();
+                if (numString.length != 3) { 
+                  return null;
+                } else {
+                  var numArr = numString.split('');
+                  numArr.forEach((val, index) => numArr[index] = parseInt(val, 10));
+                  numArr.sort((a, b) => (a - b));
+                  numArr.reverse();
+                  var result = numArr.join('');
+                  result = parseInt(result, 10)
+                  return result;
+                }
+              }         
+            };</code></pre>
         </div>
       </section>
       <section class="row mb-3" id="Work">
@@ -170,6 +149,11 @@
         </div>
       </section>
     </footer>
+    <script src="./js/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/highlight.min.js"></script>
+    <script>
+      hljs.initHighlightingOnLoad();
+    </script>
   </body>
-  <script src="./js/script.js"></script>
 </html>

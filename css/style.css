@@ -1,6 +1,3 @@
-html {
-  scroll-behavior: smooth;
-}
 a {
   color: #36c;
 }
@@ -14,10 +11,6 @@ a {
   padding-left: 0;
   list-style: none;
 }
-.center {
-  text-align: center;
-}
-
 /* print */
 @media print {
   .container {
@@ -54,9 +47,6 @@ a {
 .circle {
   border-radius: 50%;
   height: 12em;
-}
-figure {
-  margin: 0;
 }
 .logo {
   height: 3em;
@@ -108,59 +98,3 @@ figure {
   content: '\25B6';
 }
 /* '' */
-
-section{
-  z-index: -1;
-}
-.ham {
-  position: fixed;
-  /* keep the hamburger button above everything */
-  z-index: 100;
-  top: 1rem;
-  right: 1rem;
-  width: 3rem;
-  height: 3rem;
-  border: black solid 1px;
-  background: white;
-  cursor: pointer;
-}
-
-.xIcon {
-  display: none;
-}
-
-.menu {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100vh;
-  background: black;
-  color: white;
-  transform: translateY(-100%);
-  transition: transform 0.2s;
-  list-style: none;
-  padding-top: 4rem;
-}
-
-.showMenu {
-  transform: translateY(0);
-}
-
-.menu li {
-  padding: 1rem 0;
-  text-align: center;
-}
-
-.menuLink {
-  display: inline;
-  font-size: 2rem;
-  color: white;
-  text-decoration: none;
-}
-
-.menuLink:hover {
-  text-decoration: none;
-}
